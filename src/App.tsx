@@ -1,7 +1,8 @@
 import { QueryClient, QueryClientProvider } from 'react-query';
 import Header from './components/Header';
-import Hero from './components/Hero';
+import Hero from './components/Hero/Hero';
 import RegistrationForm from './components/RegistrationForm';
+import bg from './assets/images/bg.png';
 
 const queryClient = new QueryClient({
   defaultOptions: {
@@ -15,9 +16,12 @@ const queryClient = new QueryClient({
 function App() {
   return (
     <QueryClientProvider client={queryClient}>
-      <div className="min-h-screen bg-gray-50">
+      <div
+        className="min-h-screen wrapper bg-main flex flex-col items-center justify-center"
+        style={{ backgroundImage: `url(${bg})` }}
+      >
         <Header />
-        <main>
+        <main className="flex items-center justify-between  flex-col w-full lg:flex-row">
           <Hero />
           <RegistrationForm />
         </main>

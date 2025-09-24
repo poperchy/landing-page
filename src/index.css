@@ -2,16 +2,181 @@
 @tailwind components;
 @tailwind utilities;
 
-body {
-  margin: 0;
-  font-family:
-    -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu',
-    'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@layer base {
+  @font-face {
+    font-family: 'MTSSans';
+    src: url('./fonts/MTSSans-Black.woff2') format('woff2');
+    font-weight: 900;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: 'Roboto';
+    src: url('./fonts/roboto-regular.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: 'Roboto';
+    src: url('./fonts/roboto-medium.woff2') format('woff2');
+    font-weight: 500;
+    font-style: normal;
+  }
+
+  :root {
+    --font-roboto: 'Roboto', sans-serif;
+    --font-mts: 'MTSSans', sans-serif;
+  }
+
+  body {
+    margin: 0;
+    font-family: var(--font-roboto);
+    font-weight: 400;
+  }
 }
 
-code {
-  font-family:
-    source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+@layer components {
+  .font-mts {
+    font-family: var(--font-mts);
+    font-weight: 900;
+  }
+
+  .font-roboto-medium {
+    font-family: var(--font-roboto);
+    font-weight: 500;
+  }
+
+  .wrapper {
+    position: relative;
+    background-position: 'center';
+    background-repeat: 'no-repeat';
+    background-size: 'cover';
+    mix-blend-mode: luminosity;
+    overflow: hidden;
+  }
+
+  .glass-effect {
+    background: rgba(0, 0, 0, 0.7);
+    position: relative;
+    z-index: 1;
+  }
+
+  .glass-effect::before {
+    position: absolute;
+    content: '';
+    inset: 0;
+    z-index: -1;
+    backdrop-filter: blur(15.8px);
+  }
+
+  .hero-frame {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+
+  .fire-border {
+    background-repeat: no-repeat;
+    left: 0;
+    width: 100%;
+    height: 120%;
+    position: absolute;
+    left: -27px;
+    top: -30px;
+    background-size: 106%;
+  }
+
+  .fire-border--reverse {
+    transform: scaleX(-1);
+    left: 25px;
+  }
+
+  .character {
+    display: flex;
+    align-items: flex-end;
+    width: auto;
+    height: auto;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 43px;
+    z-index: 2;
+  }
+
+  .spark {
+    width: 100%;
+    height: auto;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+  }
+
+  .gold {
+    height: auto;
+    position: absolute;
+    bottom: 0;
+    left: 46.6%;
+  }
+
+  .gold-top {
+    position: absolute;
+    top: 27px;
+    right: 20.4%;
+  }
+
+  .wrapper::before {
+    position: absolute;
+    content: '';
+    width: 835.28px;
+    right: 5%;
+    top: -124%;
+    z-index: 0;
+    background: rgba(113, 74, 255, 0.78);
+    filter: blur(101.35px);
+    height: 1668px;
+    mix-blend-mode: color-dodge;
+    border-radius: 50%;
+    transform: rotate(0deg);
+  }
+
+  .wrapper::after {
+    position: absolute;
+    content: '';
+    width: 835.28px;
+    left: 0;
+    bottom: -80%;
+    z-index: 0;
+    background: rgba(171, 74, 255, 0.78);
+    filter: blur(101.35px);
+    mix-blend-mode: color-dodge;
+    height: 1668px;
+    border-radius: 50%;
+    transform: rotate(0deg);
+  }
+
+  .animate-scale-pulse {
+    animation: scale-pulse 1.2s linear infinite;
+  }
+
+  @keyframes scale-pulse {
+    0%,
+    100% {
+      transform: scale(1);
+    }
+
+    50% {
+      transform: scale(1.06);
+    }
+  }
+
+  input[type='checkbox']:checked {
+    background-color: #5ab828;
+    border-color: #5ab828;
+  }
+
+  input[type='checkbox']:checked + div svg {
+    opacity: 1;
+  }
 }
