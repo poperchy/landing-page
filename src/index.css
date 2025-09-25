@@ -104,6 +104,7 @@
   .form-section {
     width: 100%;
   }
+
   .form-section-content {
     width: 100%;
     max-width: 280px;
@@ -132,9 +133,11 @@
     bottom: 31%;
     z-index: 11;
   }
+
   .form-btn {
     letter-spacing: 0.07em;
   }
+
   .rectangle {
     width: 340px;
   }
@@ -229,6 +232,7 @@
       left: 16px;
       width: 94%;
     }
+
     .form-section-content {
       max-width: 380px;
     }
@@ -283,20 +287,25 @@
     .hero-title {
       font-size: 240px;
     }
+
     .form-section {
       max-width: 300px;
     }
+
     .form-section-content {
       max-width: 300px;
     }
   }
+
   @media (min-width: 1150px) {
     .form-section {
       max-width: 400px;
     }
+
     .form-section-content {
       max-width: 400px;
     }
+
     .gold-top {
       right: 200px;
     }
@@ -314,9 +323,11 @@
     .hero-title {
       font-size: 274.43px;
     }
+
     .form-section {
       max-width: 580px;
     }
+
     .form-section-content {
       max-width: 380px;
     }
