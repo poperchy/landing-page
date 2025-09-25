@@ -37,7 +37,9 @@ const Hero: React.FC = () => {
               className="h-[91%] lg:h-[95%] w-[100%] lg:w-[106%] max-w-[100%] lg:max-w-[106%]"
             />
           </div>
+
           <Rectangle />
+
           <div className=" absolute top-[0] left-[50%] translate-x-[-50%]">
             <h1 className="flex flex-col items-center">
               <span
