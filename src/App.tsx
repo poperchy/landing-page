@@ -1,9 +1,9 @@
 import { QueryClient, QueryClientProvider } from 'react-query';
 import Header from '@/components/layout/Header';
-import Hero from '@/components/Sections/Hero/Hero';
-import RegistrationForm from '@/components/Sections/RegistrationForm';
+import Hero from '@/components/Sections/Hero/index';
+import RegistrationForm from '@/components/Form';
 import bg from '@/assets/images/bg.png';
-import bgMobile from '@/assets/images/bg-mob2.png';
+import bgMobile from '@/assets/images/bg-mob.png';
 
 const queryClient = new QueryClient({
   defaultOptions: {

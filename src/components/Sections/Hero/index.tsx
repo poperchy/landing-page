@@ -1,12 +1,12 @@
 import React from 'react';
 import Rectangle from './Rectangle';
 import fireBorder from '@/assets/images/fire-border.gif';
-import character from '@/assets/images/Character.png';
-import characterMobile from '@/assets/images/Character-mob.png';
+import character from '@/assets/images/character.png';
+import characterMobile from '@/assets/images/character-mob.png';
 import spark from '@/assets/images/spark.png';
 import sparkMobile from '@/assets/images/spark-mob.png';
 import gold from '@/assets/images/gold.png';
-import goldTop from '@/assets/images/gold2.png';
+import goldTop from '@/assets/images/gold-blue.png';
 import goldTopMobile from '@/assets/images/gold-mob.png';
 
 const Hero: React.FC = () => {
