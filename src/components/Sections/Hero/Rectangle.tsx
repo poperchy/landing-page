@@ -8,7 +8,7 @@ const Rectangle: React.FC = () => {
       viewBox="0 0 663 301"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
-      className="h-auto"
+      className="rectangle h-auto"
     >
       <g filter="url(#filter0_d_2_182)">
         <path

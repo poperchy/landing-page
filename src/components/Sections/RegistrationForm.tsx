@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
 import * as yup from 'yup';
-import { Input } from './Input';
+import { Input } from '@/components/UI/Input';
 
 const schema = yup.object({
   phone: yup
@@ -208,9 +208,9 @@ const RegistrationForm: React.FC = () => {
   };
 
   return (
-    <section className="relative max-w-[580px] px-[48px] flex flex-col items-center justify-center w-full glass-effect min-h-screen z-10">
-      <div className="max-w-[380px] w-full  z-10">
-        <h2 className="text-left text-[22px] leading-[28px] text-white font-roboto-medium mb-[22px]">
+    <section className="form-section rounded-t-[24px] relative h-[426px] lg:h-full  px-[41px] flex flex-col items-center justify-center  glass-effect lg:min-h-screen z-10">
+      <div className="form-section-content  z-10">
+        <h2 className="text-left text-[22px] leading-[28px] text-white font-roboto-medium mb-[17px] lg:mb-[22px]">
           Регистрация
         </h2>
         <form onSubmit={handleSubmit(onSubmit)} className="w-full">
@@ -271,7 +271,7 @@ const RegistrationForm: React.FC = () => {
           <button
             type="submit"
             disabled={isSubmitting}
-            className={`w-full text-[13px] h-[46px] uppercase py-[15px] px-[15px] rounded-md font-roboto-medium transition-colors ${
+            className={`form-btn w-full text-[13px] h-[46px] uppercase py-[15px] px-[15px] rounded-md font-roboto-medium transition-colors ${
               isSubmitting
                 ? 'bg-btn-default text-white cursor-not-allowed'
                 : 'bg-btn-default text-white hover:bg-btn-hover hover:shadow-btn-shadow-hover active:bg-btn-active'

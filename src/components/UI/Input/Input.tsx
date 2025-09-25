@@ -7,7 +7,7 @@ const DEFAULT_CLASSES = {
   inputWithIcon: 'pr-10',
   checkbox:
     'w-[18px] h-[18px] appearance-none border-1 border-checkbox-border rounded bg-checkbox-bg cursor-pointer relative transition-all duration-200 ',
-  label: 'block text-[13px] text-input-label mb-[4px]',
+  label: 'block text-[13px] text-input-label mb-[2px] lg:mb-[4px]',
   checkboxLabel: 'text-checkbox-text cursor-pointer text-[11px] leading-[14px]',
   checkboxLink: 'underline hover:text-blue-500',
   error: 'mt-1 text-sm text-[#F91717]',
